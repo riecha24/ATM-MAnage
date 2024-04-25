@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+      <div class="restock-container">
+        <h2>Restock Page</h2>
+        <mat-form-field>
+          <mat-label>Select Denomination</mat-label>
+          <mat-select [(ngModel)]="selectedDenomination">
+            <mat-option *ngFor="let denomination of denominations | keyvalue" [value]="denomination.key">
+              ${{ denomination.key }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="denomination-item" *ngIf="selectedDenomination">
+          <label for="quantity-{{ selectedDenomination }}">Quantity of ${{ selectedDenomination }}:</label>
+          <input type="number" id="quantity-{{ selectedDenomination }}" [(ngModel)]="quantityToRestock" class="quantity-input">
+          <button (click)="restock()" class="restock-button">Restock</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

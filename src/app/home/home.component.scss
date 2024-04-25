@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../../assets/images.jpg");
+  background-size: cover; /* Ensures the entire image is visible without distortion */
+  background-repeat: no-repeat;
+  /* Ensures the image covers the entire container */
+  background-position: center;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.group {
+  flex: 1;
+  margin: 0 10px;
+}
